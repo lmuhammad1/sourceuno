@@ -1,18 +1,25 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-h2{
-	
+
+ 
+.navbar-inner {
+  background: none !important; 
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+.navbar{
+	border-bottom: 1px solid #000000;
 }
 
-header img {
-    vertical-align:middle;
-    margin:0 2px 0 2px; /* YOU CAN ADJUST IMAGES SPACE WITH THIS MARGINS */
+
+
+.hero-unit{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;	
 }
 
-#box {
-	display: block;
-	padding:0 30px 0 30px;
-	
-	
+.image {
+    text-align: center;
 }
