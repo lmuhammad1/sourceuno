@@ -13,17 +13,12 @@
     
 	    <div class="nav-collapse">
 	    <ul class="nav nav pull-right">
-	      <li><a href="#">Start Now</a> </li>
-	      <li><a href="#">How it Works</a></li>
-	      <li><a href="#">Job Info</a></li>
-	      <li><a href="#">Blog</a></li>
-	      <li><a href="#">Contact</a></li>
-		  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign In <b class="caret"></b></a>
-		    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-	  	      <li><a href="#">Blog</a></li>
-	  	      <li><a href="#">Contact</a></li>
-		    </ul>			
-		  </li>
+	      <li><%= link_to "Home",    root_path %></li>
+	      <li><%= link_to "Help",    help_path %></li>
+		  <li><%= link_to "About",    about_path %></li>
+		  <li><%= link_to "Contact",    contact_path %></li>
+		  <li><%= link_to "Sign in", '#' %></li>
+	    
 	 
 		  
 	    </ul>
