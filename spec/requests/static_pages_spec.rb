@@ -3,6 +3,7 @@ require 'spec_helper'
 describe "Static pages" do
   
   subject { page }
+  
   let(:base_title) { "SourceUno" }
   
   describe "Home page" do
