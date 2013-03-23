@@ -11,7 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317065054) do
+ActiveRecord::Schema.define(:version => 20130323230729) do
+
+  create_table "fields", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "profession_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "fields", ["profession_id"], :name => "index_fields_on_profession_id"
+
+  create_table "professions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
