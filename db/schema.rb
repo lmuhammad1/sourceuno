@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324014716) do
+ActiveRecord::Schema.define(:version => 20130407214532) do
 
   create_table "experts", :force => true do |t|
     t.string   "first_name"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(:version => 20130324014716) do
   end
 
   add_index "fields", ["profession_id"], :name => "index_fields_on_profession_id"
+
+  create_table "fields_videos", :id => false, :force => true do |t|
+    t.integer "field_id"
+    t.integer "video_id"
+  end
+
+  add_index "fields_videos", ["field_id", "video_id"], :name => "index_fields_videos_on_field_id_and_video_id"
 
   create_table "professions", :force => true do |t|
     t.string   "name"
