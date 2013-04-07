@@ -11,7 +11,44 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317065054) do
+ActiveRecord::Schema.define(:version => 20130407220300) do
+
+  create_table "experts", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "fields", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "profession_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "fields", ["profession_id"], :name => "index_fields_on_profession_id"
+
+  create_table "fields_videos", :id => false, :force => true do |t|
+    t.integer "field_id"
+    t.integer "video_id"
+  end
+
+  add_index "fields_videos", ["field_id", "video_id"], :name => "index_fields_videos_on_field_id_and_video_id"
+
+  create_table "professions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -25,5 +62,17 @@ ActiveRecord::Schema.define(:version => 20130317065054) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "videos", :force => true do |t|
+    t.string   "caption"
+    t.string   "wistia_id"
+    t.integer  "length"
+    t.integer  "expert_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "question_id"
+  end
+
+  add_index "videos", ["expert_id"], :name => "index_videos_on_expert_id"
 
 end
