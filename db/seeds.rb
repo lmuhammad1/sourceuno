@@ -11,14 +11,16 @@ User.create!(name: "Louis Muhammad",
              password: "root62",
              password_confirmation: "root62")
 
-legal_profession = Profession.create!(name: "Legal Profession", description: "Description for the Legal Profession")
+legal_profession = Profession.create!(name: "Legal", description: "Description for the Legal Profession")
 corporate_law_field = Field.create!(name: "Corporate Law", description: "Description for Corporate Law Field", profession: legal_profession)
+tax_law_field = Field.create!(name: "Tax Law", description: "Description for Tax Law Field", profession: legal_profession)
 org_structure_video = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure")
 expert_dennis = Expert.create!(first_name: "Dennis", last_name: "Zakas")
 expert_dennis.videos << org_structure_video
 corporate_law_field.videos << org_structure_video
 expert_dennis.save!
 corporate_law_field.save!
-question = Question.create!(text: "What is the org structure of a corporate law firm?")
-org_structure_video.question = question
+question1 = Question.create!(text: "What is the org structure of a corporate law firm?")
+question2 = Question.create!(text: "Does this job continue to fuel my growth in this carreer?")
+org_structure_video.question = question1
 org_structure_video.save!

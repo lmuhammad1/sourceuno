@@ -1,4 +1,7 @@
 Sourceuno::Application.routes.draw do
+  resources :fields
+
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -14,6 +17,13 @@ Sourceuno::Application.routes.draw do
   match '/contact',  to: 'static_pages#contact'
   match '/employer',  to: 'static_pages#employer'
 
+
+  #sourceuno.com/legal/corporate-law
+  #sourceuno.com/professions/1/fields/1
+
+  #resources :professions do
+  #  resources :fields
+  #end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
