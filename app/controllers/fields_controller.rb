@@ -15,9 +15,11 @@ class FieldsController < ApplicationController
   def show
     @field = Field.find(params[:id])
     @videos = @field.videos
-    # @videos.each do |video|
-    #   @questions << video.question
-    # end
+    @questions_hash = { }
+
+    @videos.each do |video|
+      @questions_hash[video.question.text] = video.question.videos
+    end
 
     respond_to do |format|
       format.html # show.html.erb

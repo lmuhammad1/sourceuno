@@ -1,5 +1,48 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Meet these Law Professionals who have answers to your questions</h1>
+<!-- 4 static video thumnails -->
 
-<%= link_to 'Edit', edit_field_path(@field) %> |
+
+<h1>Select a question and click to watch that professional answer it now</h1>
+
+
+<h2>Is this the right field for me?</h2>
+
+<%# <% @videos.each do |video| %1> %>
+<%#   <p><%= link_to "#{video.expert.first_name}'s Answer", "http://test/url/#{video.wistia_id}" %1></p> %>
+<%# <% end %1> %>
+
+<h2>What is the org structure of a corporate law firm?</h2>
+<% @questions_hash["What is the org structure of a corporate law firm?"].each do |video| %>
+  <p><%= link_to "#{video.expert.first_name}'s Answer", "http://test/url/#{video.wistia_id}" %></p>
+<% end %>
+
+
+<h3>How and why did you get started in tax law?</h3>
+
+<h3>What do tax lawyers do (from a brief and high level)? </h3>
+
+<h3>Walk me through a typical day or week in tax law? </h3>
+
+<h3>What are some highlights of working in tax law?</h3>
+
+<h3>What are some challenges of working in tax law that candidates should be aware of?</h3>
+
+
+<h2>How do I get hired?</h2>
+<h3>What do you look for in a candidate and what makes someone stand out? </h3>
+
+<h3>Describe the interview process for entry level positions and lateral hires?</h3>
+
+<h3>What questions and challenges can I expect in an interview for tax law? How can I ace my interview?</h3>
+
+<h3>What are some common mistakes that candidates make?</h3>
+
+
+<h2>Other</h2> 
+<h3>What piece of advice would you have for someone early in their law career?</h3>
+
+<h3>What should I consider when choosing a specific law firm? What questions should I ask in an interview?</h3>
+
 <%= link_to 'Back', fields_path %>
