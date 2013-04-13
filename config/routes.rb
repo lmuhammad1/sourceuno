@@ -1,5 +1,6 @@
 Sourceuno::Application.routes.draw do
   resources :fields
+  resources :professions
 
 
   resources :users
@@ -16,6 +17,7 @@ Sourceuno::Application.routes.draw do
   match '/about',  to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
   match '/employer',  to: 'static_pages#employer'
+  
 
 
   #sourceuno.com/legal/corporate-law
