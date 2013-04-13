@@ -27,8 +27,8 @@ emily  = Expert.create!(first_name: "Emily",  last_name: "Johnston")
 
 question1  = Question.create!(text: "What is the org structure of a corporate law firm?")
 video1 = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure", expert: dennis, question: question1)
-video2 = Video.create!(wistia_id: "hb8f2u4", length: 110, caption: "Kim answering question about org structure", expert: kim, question: question1)
-video3 = Video.create!(wistia_id: "8f2u4", length: 110, caption: "Kim answering question about org structure", expert: sarah, question: question1)
+video2 = Video.create!(wistia_id: "hjpivuhgan", length: 110, caption: "Kim answering question about org structure", expert: kim, question: question1)
+video3 = Video.create!(wistia_id: "8mdfdx1kbu", length: 110, caption: "Kim answering question about org structure", expert: sarah, question: question1)
 corporate_law_field.videos = [video1, video2, video3]
 #corporate_law_field.save!
 

@@ -13,13 +13,11 @@
 <%#   <p><%= link_to "#{video.expert.first_name}'s Answer", "http://test/url/#{video.wistia_id}" %1></p> %>
 <%# <% end %1> %>
 
-<h2>What is the org structure of a corporate law firm?</h2>
-<% @questions_hash["What is the org structure of a corporate law firm?"].each do |video| %>
-  <p><%= link_to "#{video.expert.first_name}'s Answer", "http://test/url/#{video.wistia_id}" %></p>
-<% end %>
-
+<h3>What is the org structure of a corporate law firm?</h3>
+<%= render :partial => 'question_and_answers', :question => 'What is the org structure of a corporate law firm?' %>
 
 <h3>How and why did you get started in tax law?</h3>
+
 
 <h3>What do tax lawyers do (from a brief and high level)? </h3>
 
