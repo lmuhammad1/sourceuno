@@ -6,10 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(name: "Louis Muhammad",
-             email: "louis@sourceuno.com",
-             password: "root62",
-             password_confirmation: "root62")
+# Users
+User.create!(name: "Louis Muhammad", email: "louis@sourceuno.com", password: "root62", password_confirmation: "root62")
 
 # Profession
 legal_profession = Profession.create!(name: "Legal", description: "Description for the Legal Profession")
@@ -55,22 +53,36 @@ frontline  = Expert.create!(first_name: "Frontline Selling",  last_name: "FS")
 alston  = Expert.create!(first_name: "Alston",  last_name: "Mason")
 
 
-question1  = Question.create!(text: "What is the org structure of a corporate law firm?")
-video1 = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure", expert: dennis, question: question1)
-video2 = Video.create!(wistia_id: "8mdfdx1kbu", length: 110, caption: "Kim answering question about org structure", expert: nick_alex, question: question1)
-video3 = Video.create!(wistia_id: "hjpivuhgan", length: 110, caption: "Kim answering question about org structure", expert: frontline, question: question1)
-corporate_law_field.videos = [video1, video2, video3]
+question1  = Question.create!(text: "Meet these Law Professionals who have answers to your questions")
+video1 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question1)
+video2 = Video.create!(wistia_id: "fcmaw5f5l9", length: 110, caption: "Meet Nick & Alex", expert: nick_alex, question: question1)
+video3 = Video.create!(wistia_id: "hjpivuhgan", length: 110, caption: "Meet Frontline Selling", expert: frontline, question: question1)
+
+question2  = Question.create!(text: "What is the org structure of a corporate law firm?")
+video4 = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure", expert: dennis, question: question2)
+video5 = Video.create!(wistia_id: "8mdfdx1kbu", length: 110, caption: "Nick & Alex answering question about org structure", expert: nick_alex, question: question2)
+video6 = Video.create!(wistia_id: "f45n2wm8bw", length: 110, caption: "Frontline Selling answering question about org structure", expert: frontline, question: question2)
+
+question3  = Question.create!(text: "How and why did you get started in corporate law?")
+video7 = Video.create!(wistia_id: "jpeiwxrk11", length: 110, caption: "Dennis explains why he got started in corporate law", expert: dennis, question: question3)
+
+question4  = Question.create!(text: "What do corporate lawyers do (from a brief and high level)?")
+video8 = Video.create!(wistia_id: "zvoot77xrv", length: 110, caption: "Dennis explains what tax lawyers do", expert: dennis, question: question4)
+
+question5  = Question.create!(text: "Walk me through a typical day or week in corporate law?")
+question6  = Question.create!(text: "What are some highlights of working in corporate law?")
+video9 = Video.create!(wistia_id: "9f2cn6vkc7", length: 110, caption: "Dennis talks about highlights", expert: dennis, question: question6)
+
+question7  = Question.create!(text: "What are some challenges of working in corporate law that candidates should be aware of?")
+question8  = Question.create!(text: "What do you look for in a candidate and what makes someone stand out?")
+question9  = Question.create!(text: "Describe the interview process for entry level positions and lateral hires?")
+question10  = Question.create!(text: "What questions and challenges can I expect in an interview for corporate law? How can I ace my interview?")
+video10 = Video.create!(wistia_id: "q2jteg2k5m", length: 110, caption: "Dennis talks about interview questions", expert: dennis, question: question10)
+
+question11 = Question.create!(text: "What are some common mistakes that candidates make?")
+video11 = Video.create!(wistia_id: "xsq2yleovx", length: 110, caption: "Dennis talks about common mistakes", expert: dennis, question: question11)
+
+question12 = Question.create!(text: "What piece of advice would you have for someone early in their law career?")
+question13 = Question.create!(text: "What should I consider when choosing a specific law firm? What questions should I ask in an interview?")
+corporate_law_field.videos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
 #corporate_law_field.save!
-
-question2  = Question.create!(text: "How and why did you get started in tax law?")
-question3  = Question.create!(text: "What do tax lawyers do (from a brief and high level)?")
-question4  = Question.create!(text: "Walk me through a typical day or week in tax law?")
-question5  = Question.create!(text: "What are some highlights of working in tax law?")
-question6  = Question.create!(text: "What are some challenges of working in tax law that candidates should be aware of?")
-question7  = Question.create!(text: "What do you look for in a candidate and what makes someone stand out?")
-question8  = Question.create!(text: "Describe the interview process for entry level positions and lateral hires?")
-question9  = Question.create!(text: "What questions and challenges can I expect in an interview for tax law? How can I ace my interview?")
-question10 = Question.create!(text: "What are some common mistakes that candidates make?")
-question11 = Question.create!(text: "What piece of advice would you have for someone early in their law career?")
-question12 = Question.create!(text: "What should I consider when choosing a specific law firm? What questions should I ask in an interview?")
-

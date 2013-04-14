@@ -26,6 +26,7 @@ class FieldsController < ApplicationController
       format.json { render json: @field }
     end
   end
+  
 
   # GET /fields/new
   # GET /fields/new.json

@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Meet these Law Professionals who have answers to your questions</h1>
-<!-- 4 static video thumnails -->
+<%= render 'meet_professionals', :question => 'Meet these Law Professionals who have answers to your questions' %>
 
 
 <h1>Select a question and click to watch that professional answer it now</h1>
@@ -9,34 +8,30 @@
 
 <h2>Is this the right field for me?</h2>
 
+<%= render 'question_and_answers', :question => 'What is the org structure of a corporate law firm?' %>
 
-<h3>What is the org structure of a corporate law firm?</h3>
-<%= render :partial => 'question_and_answers', :question => 'What is the org structure of a corporate law firm?' %>
+<%= render 'question_and_answers', :question => 'How and why did you get started in corporate law?' %>
 
-<h3>How and why did you get started in tax law?</h3>
+<%= render 'question_and_answers', :question => 'What do corporate lawyers do (from a brief and high level)?' %>
 
-<h3>What do tax lawyers do (from a brief and high level)? </h3>
 
-<h3>Walk me through a typical day or week in tax law? </h3>
+<h3>Walk me through a typical day or week in corporate law? </h3>
 
-<h3>What are some highlights of working in tax law?</h3>
+<%= render 'question_and_answers', :question => 'What are some highlights of working in corporate law?' %>
 
-<h3>What are some challenges of working in tax law that candidates should be aware of?</h3>
+<h3>What are some challenges of working in corporate law that candidates should be aware of?</h3>
 
 
 <h2>How do I get hired?</h2>
 <h3>What do you look for in a candidate and what makes someone stand out? </h3>
-
 <h3>Describe the interview process for entry level positions and lateral hires?</h3>
 
-<h3>What questions and challenges can I expect in an interview for tax law? How can I ace my interview?</h3>
+<%= render 'question_and_answers', :question => 'What questions and challenges can I expect in an interview for corporate law? How can I ace my interview?' %>
 
-<h3>What are some common mistakes that candidates make?</h3>
-
+<%= render 'question_and_answers', :question => 'What are some common mistakes that candidates make?' %>
 
 <h2>Other</h2> 
 <h3>What piece of advice would you have for someone early in their law career?</h3>
-
 <h3>What should I consider when choosing a specific law firm? What questions should I ask in an interview?</h3>
 
 <%= link_to 'Back', fields_path %>
