@@ -7,7 +7,7 @@
 
 <% @professions.each do |profession| %>
   <tr>
-    <td><%= link_to profession.name, profession %></td>
+    <td><%= link_to profession.name, profession_fields_path(profession) %></td>
   </tr>
 <% end %>
 </table>

@@ -2,7 +2,13 @@ class FieldsController < ApplicationController
   # GET /fields
   # GET /fields.json
   def index
-    @fields = Field.all
+
+    if params[:profession_id]
+      @fields = Field.where(profession_id: params[:profession_id])
+      @profession_name = Profession.find(params[:profession_id]).name
+    else 
+      @fields = Field.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
