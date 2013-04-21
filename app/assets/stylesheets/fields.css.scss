@@ -1,3 +1,74 @@
 // Place all the styles related to the Fields controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-videos {
+	width: 200px;
+	display: inline-block;
+	margin-top: 0 px;
+	margin-right: 35px;
+	margin-bottom: -10px;
+	margin-left: 35px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	text-align: center;	
+}
+
+.main-question-block {
+	display: block;
+}
+
+.question-header {
+	height: 30px;
+	background-color: #eaebec;
+	color: #777c81;
+	font-size: 20px;
+	font-family: 'Aldrich', sans-serif;
+	margin-left: 10px;
+	padding-left: 30px;
+	line-height: 30px;
+}
+
+.question {
+
+	vertical-align: middle;
+	line-height: normal;
+}
+
+.main-question-number {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 200%;
+	color: #fff;
+	background-color: #f48120;
+	font-size: 20px;
+	float: left;
+	clear: both;
+}
+.sub1-question {
+	font-size: 16px;
+	font-family: 'Aldrich', sans-serif;
+	color: #5a6066;
+	margin-top: 0 px;
+	margin-right: 35px;
+	margin-left: 35px;
+	text-align: left;	
+}
+
+.sub2-question {
+	font-size: 12px;
+	font-family: 'Aldrich', sans-serif;
+	color: #777c81;
+	margin-top: 0 px;
+	margin-right: 35px;
+	margin-bottom: -10px;
+	margin-left: 35px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	text-align: left;	
+}

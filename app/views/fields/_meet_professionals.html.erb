@@ -1,8 +1,11 @@
-<h1><%= "#{question}"%></h1>
+<div class="main-question-block">
+<div class="main-question-number">&nbsp;1&nbsp;</div>
+<div class="question"><h1 class="question-header">  <%= "#{question}"%></h1></div></div>
 <% @questions_hash[question].each do |video| %>
   <div class='main-videos'>
     <img src="http://embed.wistia.com/deliveries/823e749b03402255f61d9f7f59aded74b29f31b7.jpg?image_play_button=true&image_crop_resized=150x100" alt="" />
-    <p><%= link_to "#{video.expert.first_name}'s Answer", "http://fast.wistia.net/embed/iframe/#{video.wistia_id}?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => "wistia-popover[height=360,width=640]" %></p>  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script> 
+   
+	<p><%= link_to "#{video.expert.first_name}'s Answer", "http://fast.wistia.net/embed/iframe/#{video.wistia_id}?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => "wistia-popover[height=360,width=640]" %></p> <script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script> 
   </div>
 <% end %>
 
