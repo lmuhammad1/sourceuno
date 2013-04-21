@@ -24,7 +24,7 @@ describe FieldsController do
   # Field. As you add validations to Field, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {name: 'Corporate Law'}
   end
 
   # This should return the minimal set of values that should be in the session
@@ -158,6 +158,21 @@ describe FieldsController do
       field = Field.create! valid_attributes
       delete :destroy, {:id => field.to_param}, valid_session
       response.should redirect_to(fields_url)
+    end
+  end
+
+  describe "field_name_to_file_name" do
+    it "should convert Corporate Law correctly" do
+      FieldsController.field_name_to_file_name("Corporate Law").should == 'corporate_law'
+    end
+    it "should convert Corporate & Tax Law correctly" do
+      FieldsController.field_name_to_file_name("Corporate & Tax Law").should == 'corporate_tax_law'
+    end
+    it "should convert Corporate / Tax Law correctly" do
+      FieldsController.field_name_to_file_name("Corporate / Tax Law").should == 'corporate_tax_law'
+    end
+    it "should convert Corporate (Tax Law) correctly" do
+      FieldsController.field_name_to_file_name("Corporate (Tax Law)").should == 'corporate_tax_law'
     end
   end
 

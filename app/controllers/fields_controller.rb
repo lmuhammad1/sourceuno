@@ -5,6 +5,7 @@ class FieldsController < ApplicationController
 
     if params[:profession_id]
       @fields = Field.where(profession_id: params[:profession_id])
+      @fields = @fields.select { |f| f.videos.count > 0 }
       @profession_name = Profession.find(params[:profession_id]).name
     else 
       @fields = Field.all
@@ -20,6 +21,7 @@ class FieldsController < ApplicationController
   # GET /fields/1.json
   def show
     @field = Field.find(params[:id])
+    folder_name = FieldsController.field_name_to_file_name @field.name
     @videos = @field.videos
     @questions_hash = { }
 
@@ -27,10 +29,12 @@ class FieldsController < ApplicationController
       @questions_hash[video.question.text] = video.question.videos
     end
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @field }
-    end
+    render 'fields/pages/' + folder_name.downcase
+
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @field }
+    # end
   end
   
 
@@ -92,5 +96,10 @@ class FieldsController < ApplicationController
       format.html { redirect_to fields_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def self.field_name_to_file_name(field_name)
+    field_name.gsub(/[ \/&()]/, "_").gsub(/_+/, "_").gsub(/_$/, "").downcase
   end
 end
