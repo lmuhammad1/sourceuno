@@ -56,7 +56,7 @@ nick_alex = Expert.create!(first_name: "Nick & Alex",       last_name: "Team")
 frontline = Expert.create!(first_name: "Frontline Selling", last_name: "FS")
 alston    = Expert.create!(first_name: "Alston",            last_name: "Mason")
 
-
+#Corporate Law Questions
 question1  = Question.create!(text: "Meet these Law Professionals who have answers to your questions")
 video1 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question1)
 video2 = Video.create!(wistia_id: "fcmaw5f5l9", length: 110, caption: "Meet Nick & Alex", expert: nick_alex, question: question1)
@@ -90,3 +90,8 @@ question12 = Question.create!(text: "What piece of advice would you have for som
 question13 = Question.create!(text: "What should I consider when choosing a specific law firm? What questions should I ask in an interview?")
 corporate_law_field.videos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
 #corporate_law_field.save!
+
+#Tax Law Questions
+question14  = Question.create!(text: "Meet these Tax Law Professionals who have answers to your questions")
+video12 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question14)
+tax_law_field.videos = [video12]
