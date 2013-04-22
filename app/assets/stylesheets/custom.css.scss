@@ -72,8 +72,15 @@ header {
 
 #mainnav ul li a{
 	width: 100px;
-	color: #777;
-	text-decoration: none;
+    text-decoration: none;
+    color: #777;
+    &:visited {
+      color: #666;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #f48120;
+    }
 }
 
 /* footer */
@@ -89,7 +96,7 @@ header {
 	border-top-color: rgb(165, 169, 172);
 	padding-right: 50px;
 	padding-left: 50px;
-	margin-top: 50px;
+	margin-top: 30px;
 	font-size: 14px;
 }
 

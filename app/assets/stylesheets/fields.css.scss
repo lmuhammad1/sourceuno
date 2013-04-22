@@ -7,9 +7,9 @@
 	display: inline-block;
 	margin-top: 0 px;
 	margin-right: 35px;
-	margin-bottom: -10px;
+	margin-bottom: -5px;
 	margin-left: 35px;
-	padding-top: 0px;
+	padding-top: -5px;
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
@@ -52,9 +52,9 @@
 	font-size: 18px;
 	font-family: 'Josefin Slab', serif;
 	color: #5a6066;
-	margin-top: 0 px;
-	margin-right: 35px;
-	margin-left: 35px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	margin-left: 10px;
 	text-align: left;	
 }
 
@@ -62,13 +62,19 @@
 	font-size: 16px;
 	font-family: 'Josefin Slab', serif;
 	color: #777c81;
-	margin-top: 0 px;
+	margin-top: 0px;
 	margin-right: 35px;
-	margin-bottom: -10px;
+	margin-bottom: -5px;
 	margin-left: 35px;
-	padding-top: 0px;
+	padding-top: -5px;
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 	text-align: left;	
+}
+
+.video-line-separator {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 250px;
 }
