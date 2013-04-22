@@ -55,43 +55,89 @@ dennis    = Expert.create!(first_name: "Dennis",            last_name: "Zakas")
 nick_alex = Expert.create!(first_name: "Nick & Alex",       last_name: "Team")
 frontline = Expert.create!(first_name: "Frontline Selling", last_name: "FS")
 alston    = Expert.create!(first_name: "Alston",            last_name: "Mason")
+david     = Expert.create!(first_name: "David",            last_name: "Lilenfeld")
+
+
 
 #Corporate Law Questions
 question1  = Question.create!(text: "Meet these Law Professionals who have answers to your questions")
-video1 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question1)
-video2 = Video.create!(wistia_id: "fcmaw5f5l9", length: 110, caption: "Meet Nick & Alex", expert: nick_alex, question: question1)
-video3 = Video.create!(wistia_id: "hjpivuhgan", length: 110, caption: "Meet Frontline Selling", expert: frontline, question: question1)
-
 question2  = Question.create!(text: "What is the org structure of a corporate law firm?")
-video4 = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure", expert: dennis, question: question2)
-video5 = Video.create!(wistia_id: "8mdfdx1kbu", length: 110, caption: "Nick & Alex answering question about org structure", expert: nick_alex, question: question2)
-video6 = Video.create!(wistia_id: "f45n2wm8bw", length: 110, caption: "Frontline Selling answering question about org structure", expert: frontline, question: question2)
-
 question3  = Question.create!(text: "How and why did you get started in corporate law?")
-video7 = Video.create!(wistia_id: "jpeiwxrk11", length: 110, caption: "Dennis explains why he got started in corporate law", expert: dennis, question: question3)
-
 question4  = Question.create!(text: "What do corporate lawyers do (from a brief and high level)?")
-video8 = Video.create!(wistia_id: "zvoot77xrv", length: 110, caption: "Dennis explains what tax lawyers do", expert: dennis, question: question4)
-
 question5  = Question.create!(text: "Walk me through a typical day or week in corporate law?")
 question6  = Question.create!(text: "What are some highlights of working in corporate law?")
-video9 = Video.create!(wistia_id: "9f2cn6vkc7", length: 110, caption: "Dennis talks about highlights", expert: dennis, question: question6)
-
 question7  = Question.create!(text: "What are some challenges of working in corporate law that candidates should be aware of?")
 question8  = Question.create!(text: "What do you look for in a candidate and what makes someone stand out?")
 question9  = Question.create!(text: "Describe the interview process for entry level positions and lateral hires?")
-question10  = Question.create!(text: "What questions and challenges can I expect in an interview for corporate law? How can I ace my interview?")
-video10 = Video.create!(wistia_id: "q2jteg2k5m", length: 110, caption: "Dennis talks about interview questions", expert: dennis, question: question10)
-
+question10 = Question.create!(text: "What questions and challenges can I expect in an interview for corporate law? How can I ace my interview?")
 question11 = Question.create!(text: "What are some common mistakes that candidates make?")
-video11 = Video.create!(wistia_id: "xsq2yleovx", length: 110, caption: "Dennis talks about common mistakes", expert: dennis, question: question11)
-
 question12 = Question.create!(text: "What piece of advice would you have for someone early in their law career?")
 question13 = Question.create!(text: "What should I consider when choosing a specific law firm? What questions should I ask in an interview?")
-corporate_law_field.videos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11]
+
+# Dennis Video
+video1 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question1)
+video2 = Video.create!(wistia_id: "hb8f2u488u", length: 110, caption: "Dennis answering question about org structure", expert: dennis, question: question2)
+video3 = Video.create!(wistia_id: "jpeiwxrk11", length: 110, caption: "Dennis explains why he got started in corporate law", expert: dennis, question: question3)
+video4 = Video.create!(wistia_id: "zvoot77xrv", length: 110, caption: "Dennis explains what tax lawyers do", expert: dennis, question: question4)
+video5 = Video.create!(wistia_id: "",           length: 110, caption: "", expert: dennis, question: question5)
+video6 = Video.create!(wistia_id: "9f2cn6vkc7", length: 110, caption: "Dennis talks about highlights", expert: dennis, question: question6)
+video7 = Video.create!(wistia_id: "",           length: 110, caption: "Dennis talks about highlights", expert: dennis, question: question7)
+video8 = Video.create!(wistia_id: "",           length: 110, caption: "", expert: dennis, question: question8)
+video9 = Video.create!(wistia_id: "",           length: 110, caption: "", expert: dennis, question: question9)
+video10 = Video.create!(wistia_id: "q2jteg2k5m", length: 110, caption: "Dennis talks about challenging questions", expert: dennis, question: question10)
+video11 = Video.create!(wistia_id: "xsq2yleovx", length: 110, caption: "Dennis talks about common mistakes", expert: dennis, question: question11)
+video12 = Video.create!(wistia_id: "",           length: 110, caption: "", expert: dennis, question: question12)
+video13 = Video.create!(wistia_id: "",           length: 110, caption: "", expert: dennis, question: question13)
+
+# David Video
+video14 = Video.create!(wistia_id: "1sl7aqkwee", length: 110, caption: "Meet David", expert: david, question: question1)
+video15 = Video.create!(wistia_id: "", length: 110, caption: "", expert: david, question: question2)
+video16 = Video.create!(wistia_id: "", length: 110, caption: "", expert: david, question: question3)
+video17 = Video.create!(wistia_id: "aa8395xh42", length: 110, caption: "David explains what trademark lawyers do", expert: david, question: question4)
+video18 = Video.create!(wistia_id: "dgy5iyckyj", length: 110, caption: "David explains a typical day or week", expert: david, question: question5)
+video19 = Video.create!(wistia_id: "dofqlkgaii", length: 110, caption: "David talks about highlights", expert: david, question: question6)
+video20 = Video.create!(wistia_id: "znqxefeswp", length: 110, caption: "David talks about highlights", expert: david, question: question7)
+video21 = Video.create!(wistia_id: "3pkltuuvss", length: 110, caption: "David talks about qualities", expert: david, question: question8)
+video22 = Video.create!(wistia_id: "znqxefeswp", length: 110, caption: "David talks about the interview process", expert: david, question: question9)
+video23 = Video.create!(wistia_id: "", length: 110, caption: "", expert: david, question: question10)
+video24 = Video.create!(wistia_id: "vyujmd1lwl", length: 110, caption: "David talks about the common mistakes", expert: david, question: question11)
+video25 = Video.create!(wistia_id: "7cgmf2yx0f", length: 110, caption: "David gives advice", expert: david, question: question12)
+video26 = Video.create!(wistia_id: "", length: 110, caption: "", expert: david, question: question13)
+
+# Nick and Alex
+video27 = Video.create!(wistia_id: "k61gocl9f9", length: 110, caption: "", expert: nick_alex, question: question1)
+video28 = Video.create!(wistia_id: "8mdfdx1kbu", length: 110, caption: "", expert: nick_alex, question: question2)
+video29 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question3)
+video30 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question4)
+video31 = Video.create!(wistia_id: "uomcivv29r", length: 110, caption: "", expert: nick_alex, question: question5)
+video32 = Video.create!(wistia_id: "phw3mjb55g", length: 110, caption: "", expert: nick_alex, question: question6)
+video33 = Video.create!(wistia_id: "yzsxzipfrn", length: 110, caption: "", expert: nick_alex, question: question7)
+video34 = Video.create!(wistia_id: "q2wkfjqp2g", length: 110, caption: "", expert: nick_alex, question: question8)
+video35 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question9)
+video36 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question10)
+video37 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question11)
+video38 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question12)
+video39 = Video.create!(wistia_id: "", length: 110, caption: "", expert: nick_alex, question: question13)
+
+# Frontline
+video40 = Video.create!(wistia_id: "hjpivuhgan", length: 110, caption: "", expert: frontline, question: question1)
+video41 = Video.create!(wistia_id: "f45n2wm8bw", length: 110, caption: "", expert: frontline, question: question2)
+video42 = Video.create!(wistia_id: "hba4z7xxye", length: 110, caption: "", expert: frontline, question: question3)
+video43 = Video.create!(wistia_id: "fgmnjjn37f", length: 110, caption: "", expert: frontline, question: question4)
+
+
+
+corporate_law_field.videos = [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10, video11, video13, 
+  video14, video15, video16, video17, video18, video19, video20, video21, video22, video23, video24, video25, video26, 
+  video27, video28, video29, video30, video31, video32, video33, video34, video35, video36, video37, video38, video39, 
+  video40, video41, video42, video43]
 #corporate_law_field.save!
 
 #Tax Law Questions
 question14  = Question.create!(text: "Meet these Tax Law Professionals who have answers to your questions")
 video12 = Video.create!(wistia_id: "g6rjx7lejx", length: 110, caption: "Meet Dennis", expert: dennis, question: question14)
 tax_law_field.videos = [video12]
+
+
+
+

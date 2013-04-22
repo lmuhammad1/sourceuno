@@ -6,33 +6,22 @@
 <div class="main-question-number">&nbsp;2&nbsp;</div>
 <h1 class="question-header"> Select a question and click to watch that professional answer it now</h1></div>
 
-
 <h2 class="sub1-question">Is this the right field for me?</h2>
-
 <%= render 'question_and_answers', :question => 'What is the org structure of a corporate law firm?' %>
-
 <%= render 'question_and_answers', :question => 'How and why did you get started in corporate law?' %>
-
 <%= render 'question_and_answers', :question => 'What do corporate lawyers do (from a brief and high level)?' %>
-
-
-<h3 class="sub2-question">Walk me through a typical day or week in corporate law? </h3>
-
+<%= render 'question_and_answers', :question => 'Walk me through a typical day or week in corporate law?' %>
 <%= render 'question_and_answers', :question => 'What are some highlights of working in corporate law?' %>
-
-<h3 class="sub2-question">What are some challenges of working in corporate law that candidates should be aware of?</h3>
-
+<%= render 'question_and_answers', :question => 'What are some challenges of working in corporate law that candidates should be aware of?' %>
 
 <h2 class="sub1-question">How do I get hired?</h2>
-<h3 class="sub2-question">What do you look for in a candidate and what makes someone stand out? </h3>
-<h3 class="sub2-question">Describe the interview process for entry level positions and lateral hires?</h3>
-
+<%= render 'question_and_answers', :question => 'What do you look for in a candidate and what makes someone stand out?' %>
+<%= render 'question_and_answers', :question => 'Describe the interview process for entry level positions and lateral hires?' %>
 <%= render 'question_and_answers', :question => 'What questions and challenges can I expect in an interview for corporate law? How can I ace my interview?' %>
-
 <%= render 'question_and_answers', :question => 'What are some common mistakes that candidates make?' %>
 
 <h2 class="sub1-question">Other</h2> 
-<h3 class="sub2-question">What piece of advice would you have for someone early in their law career?</h3>
-<h3 class="sub2-question">What should I consider when choosing a specific law firm? What questions should I ask in an interview?</h3>
+<%= render 'question_and_answers', :question => 'What piece of advice would you have for someone early in their law career?' %>
+<%= render 'question_and_answers', :question => 'What should I consider when choosing a specific law firm? What questions should I ask in an interview?' %>
 
-<%= link_to 'Back', fields_path %>
+
