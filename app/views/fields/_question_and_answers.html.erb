@@ -1,6 +1,8 @@
 <h3 class="sub2-question"><%= "#{question}"%></h3>
 <% @questions_hash[question].each do |video| %>
  <div class='main-videos'>
-  <p><%= link_to "#{video.expert.first_name}'s Answer", "http://fast.wistia.net/embed/iframe/#{video.wistia_id}?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => "wistia-popover[height=360,width=640]" %></p>  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>
+  <p><%= link_to "#{video.expert.first_name}'s Answer", "http://fast.wistia.net/embed/iframe/#{video.wistia_id}?autoPlay=true&controlsVisibleOnLoad=true&popover=true&version=v1&videoHeight=360&videoWidth=640&volumeControl=true", :class => "wistia-popover[height=360,width=640] video-link" %></p>
+  <script charset="ISO-8859-1" src="http://fast.wistia.com/static/popover-v1.js"></script>
+  <script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
 </div>
 <% end %>
