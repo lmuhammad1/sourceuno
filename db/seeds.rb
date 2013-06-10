@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Users
-User.create!(name: "Louis Muhammad", email: "louis@sourceuno.com", password: "root62", password_confirmation: "root62")
+User.create!(name: "Louis Muhammad", email: "lmuhammad1@student.gsu.edu", password: "root62", password_confirmation: "root62")
 
 # Profession
 legal_profession      = Profession.create!(name: "Legal",      description: "Description for the Legal Profession")
