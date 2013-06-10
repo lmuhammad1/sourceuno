@@ -1,4 +1,7 @@
 Sourceuno::Application.routes.draw do
+  resources :experts
+
+
   resources :employers
 
 
