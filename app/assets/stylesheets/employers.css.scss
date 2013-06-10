@@ -1,0 +1,134 @@
+// Place all the styles related to the Employers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+article {
+	display: block;
+	padding-right: 20px;
+	padding-left: 20px;	
+}
+
+#article_header {
+	display: block;
+	height: 130px;	
+}
+article h5 {
+	display: block;
+	font-family: "Nueva Std Italic";
+	font-size: 10px;
+	text-transform: uppercase;
+	line-height: normal;
+	height: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 10px;
+	letter-spacing: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(165, 169, 172);
+}
+
+figure {
+	float: left;
+	display: block;
+	padding: 0px;
+	box-shadow: -3px 3px 5px #888;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	clear: both;
+}
+
+#article_nav {
+	float: right;
+	width: 500px;
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 18px;
+}
+#article_nav ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+}
+
+#article_nav ul li {
+	float: right;
+	display: block;
+	margin-left: 30px;
+	line-height: 40px;
+	width: 150px;
+	background-color: rgb(244, 129, 32);
+	box-shadow: 3px 3px 5px #888;
+}
+#article_nav ul li a{
+	width: 100px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+section {
+	display: block;
+}
+
+#company_info {
+	width: 650px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 14px;
+	line-height: normal;
+	display: block;
+	margin-right: 50px;
+}
+#company_info h5 {
+	width: 400px;
+}
+#company_highlights h5 {
+	width: 400px;
+}
+#article_header h2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	display: block;
+	width: 400px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: left;
+	float: left;
+	clear: none;
+	padding-left: 20px;
+	margin-top: 40px;
+	color: #555;
+}
+
+#company_highlights {
+	width: 650px;
+}
+
+#company_video {
+	width: 400px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	clear: both;
+}
+
+#company_instagram {
+	height: 300px;
+	float: right;
+	display: block;
+}
+aside {
+	display: block;
+	width: 300px;
+	height: 300px;
+	float: right;
+}
+.twitter-timeline {
+	text-align: center;
+}
+.bold {
+	font-weight: bold;
+}

@@ -1,4 +1,7 @@
 Sourceuno::Application.routes.draw do
+  resources :employers
+
+
   resources :fields
 
   resources :professions do
