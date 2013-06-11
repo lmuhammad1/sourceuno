@@ -1,0 +1,27 @@
+<h1>Listing videos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @videos.each do |video| %>
+  <tr>
+    <td><%= video.caption %>
+    <td><%= link_to 'Show', video %></td>
+    <td><%= link_to 'Edit', edit_video_path(video) %></td>
+    <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% unless video.tag_list.empty? %>
+      <td>Tags: <%= raw video.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Video', new_video_path %>

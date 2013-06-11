@@ -1,34 +1,29 @@
 Sourceuno::Application.routes.draw do
+  root to: 'static_pages#home'
+
+  resources :videos
   resources :experts
-
-
   resources :employers
-
-
   resources :fields
 
   resources :professions do
     resources :fields
   end
 
-
-
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  root to: 'static_pages#home'
-  
-  
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  
+
   match '/help',  to: 'static_pages#help'
   match '/about',  to: 'static_pages#about'
   match '/contact',  to: 'static_pages#contact'
   match '/employer',  to: 'static_pages#employer'
-  
 
+
+  get 'tags/:tag', to: 'videos#index', as: :tag
 
   #sourceuno.com/legal/corporate-law
   #sourceuno.com/professions/1/fields/1
