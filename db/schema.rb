@@ -11,12 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611003814) do
+ActiveRecord::Schema.define(:version => 20130611102931) do
 
   create_table "employers", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.text     "summary"
+    t.string   "headquarters"
+    t.string   "company_size"
+    t.string   "office_locations_and_size"
+    t.string   "common_positions"
+    t.string   "recruiting_cycle"
+    t.string   "campuses_recruit_on"
+    t.text     "highlights"
+    t.string   "website_link"
+    t.string   "facebook_link"
+    t.string   "twitter_link"
+    t.string   "linkedin_link"
+    t.string   "company_video_link"
+    t.string   "twitter_feed_link"
+    t.string   "instagram_link"
   end
 
   create_table "experts", :force => true do |t|

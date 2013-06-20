@@ -21,22 +21,22 @@
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></aside>
     <section id = "company_info">
         <h5>Company Information</h5>
-        <p><span class="bold">Summary:</span> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+        <p><span class="bold">Summary: </span><%= @employer.summary %>
         <br>
         <br>
-        <span class="bold">Headquarters:</span> Atlanta
+        <span class="bold">Headquarters: </span><%= @employer.headquarters %>
         <br>
-        <span class="bold">Company Size:</span> 250 - 500 employees
+        <span class="bold">Company Size: </span><%= @employer.company_size %>
         <br>
-        <span class="bold">Office Locations & Size:</span> Atlanta (100 - 150), Charlotte (50 - 100), Nashville (<25)
+        <span class="bold">Office Locations & Size: </span><%= @employer.office_locations_and_size %>
         <br>
-        <span class="bold">Common Positions Hire for:</span> Staff Accountants
+        <span class="bold">Common Positions Hire for: </span><%= @employer.common_positions %>
         <br>
-        <span class="bold">Recruiting Cycle:</span> Interns and Junior accountants in the spring, other positions periodically
+        <span class="bold">Recruiting Cycle: </span><%= @employer.recruiting_cycle %>
         <br>
-        <span class="bold">Campuses Recruit On:</span> Georgia, Georgia State, Tennessee
+        <span class="bold">Campuses Recruit On: </span><%= @employer.campuses_recruit_on %>
         </p>
-        <p> visit <a href="http://www.sourceuno.com" target="_blank">www.sourceuno.com</a>
+        <p> visit <a href="http://<%= @employer.website_link %>" target="_blank"><%= @employer.website_link %></a>
       
 	  <%= link_to image_tag("f_logo.png", alt: "Visit us at Facebook", width:"20", height:"20"), 'http://www.facebook.com/sourceuno' %>
 	  
@@ -53,7 +53,7 @@
    	</section>
 	<section id = "company_video">
      <h5>Company Video</h5>
-        <iframe width="400" height="300" src="http://www.youtube.com/embed/AflAnZE21fg" ></iframe>
+		<iframe width="400" height="300" src="http://www.youtube.com/embed/AflAnZE21fg" ></iframe>
     </section>
     <section id = "company_instagram">
      <h5>Instagram Feed</h5>
